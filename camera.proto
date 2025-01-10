@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service CameraService {
+  // Stream frames from the camera
+  rpc StreamFrames(Empty) returns (stream FrameData);
+}
+
+message Empty {}
+
+message FrameData {
+  bytes frame = 1; // Frame as binary data
+  int64 timestamp = 2; // Timestamp for the frame
+}

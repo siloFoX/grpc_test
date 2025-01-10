@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "camera-stream"
-version = "0.2.0"
-description = "A USB camera streaming application using Flask and OpenCV"
+name = "camera-grpc-stream"
+version = "0.1.0"
+description = "A USB camera gRPC streaming application using OpenCV"
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-opencv-python = "^4.8.0"       # OpenCV for video processing
-flask = "^2.3.3"               # Flask for HTTP streaming
+opencv-python = "^4.8.0"
+grpcio = "^1.56.0"
+grpcio-tools = "^1.56.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
